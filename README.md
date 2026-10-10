@@ -1,5 +1,8 @@
 # Softcode_CspWhitelist
 
+[![CI](https://github.com/DritonCa/softcode-magento-csp/actions/workflows/ci.yml/badge.svg)](https://github.com/DritonCa/softcode-magento-csp/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Manage Magento 2's **Content Security Policy (CSP)** whitelist from the admin.
 
 Magento 2.4 ships with CSP in report-only mode and expects extra allowed hosts to
@@ -12,19 +15,25 @@ hosts per directive (`script-src`, `style-src`, `img-src`, …) directly under
 
 ## Requirements
 
-- Magento **2.4.x** (with `Magento_Csp`)
-- PHP **8.1** or **8.2**
+| | Supported |
+|---|---|
+| Magento Open Source / Adobe Commerce | 2.4.6 – 2.4.8 |
+| PHP | 8.1 – 8.4 |
+
+Tested by installation, `setup:upgrade` and `setup:di:compile` on Magento 2.4.6-p3 with
+PHP 8.2; 2.4.7 and 2.4.8 are covered by the Composer constraints but not yet verified
+on a live shop.
 
 ## Installation
 
 ```bash
-composer require softcode/module-csp-whitelist
+composer config repositories.softcode-csp vcs https://github.com/DritonCa/softcode-magento-csp
+composer require softcode/module-csp-whitelist:^2.0
+bin/magento module:enable Softcode_CspWhitelist
 bin/magento setup:upgrade
 bin/magento setup:di:compile
 bin/magento cache:flush
 ```
-
-Or copy to `app/code/Softcode/CspWhitelist` and run the same commands.
 
 ## Configuration
 
@@ -107,6 +116,11 @@ GitHub Actions runs on every push/PR and **fails the build** on:
   accepted. Grant admin access only to trusted roles.
 - Hosts are appended to the collected policy; the module does not remove hosts that
   Magento or other modules already whitelist.
+
+## Need help?
+
+Installation or adaptation to your shop: [SoftCode](https://softcode.dk) – Magento 2
+development in Copenhagen.
 
 ## License
 

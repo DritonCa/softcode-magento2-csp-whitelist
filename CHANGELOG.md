@@ -1,6 +1,19 @@
 # Changelog
 
-## [Unreleased]
+## [2.0.0] - 2026-10-10
+### Changed (breaking)
+- **The module no longer changes Magento's CSP mode.** 1.x shipped an `etc/config.xml` that
+  switched storefront and admin CSP to enforce mode and disallowed inline
+  `frame-ancestors` for the whole shop. That is a shop-level decision; set it in your
+  project's configuration if you want it.
+### Removed
+- `etc/frontend/routes.xml`, which pointed at a non-existent module (`Softcode_Whitelist`)
+  and had no controllers.
+### Changed
+- Shared "Softcode" admin tab with the other Softcode modules; section label "CSP Whitelist".
+- Composer metadata, CI on PHP 8.1–8.4, `.gitattributes` keeping tests out of dist packages.
+
+### Earlier unreleased changes, included in 2.0.0
 ### Added
 - **Unit tests now run in CI** as a real gate. A standalone `Test/bootstrap.php`
   autoloads the module and stubs the few mocked Magento contracts, so

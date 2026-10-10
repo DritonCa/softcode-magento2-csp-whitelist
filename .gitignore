@@ -1,3 +1,17 @@
-/vendor/
-*:Zone.Identifier
+# OS
 .DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Dependencies
+/vendor/
+node_modules/
+composer.lock
+
+# Test output
+.phpunit.result.cache
+coverage/
+*.log
