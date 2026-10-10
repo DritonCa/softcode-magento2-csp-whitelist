@@ -18,8 +18,8 @@
         "whitelist"
     ],
     "support": {
-        "issues": "https://github.com/DritonCa/softcode-magento-csp/issues",
-        "source": "https://github.com/DritonCa/softcode-magento-csp"
+        "issues": "https://github.com/DritonCa/softcode-magento2-csp-whitelist/issues",
+        "source": "https://github.com/DritonCa/softcode-magento2-csp-whitelist"
     },
     "require": {
         "php": "~8.1.0||~8.2.0||~8.3.0||~8.4.0",

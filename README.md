@@ -1,6 +1,6 @@
 # Softcode_CspWhitelist
 
-[![CI](https://github.com/DritonCa/softcode-magento-csp/actions/workflows/ci.yml/badge.svg)](https://github.com/DritonCa/softcode-magento-csp/actions/workflows/ci.yml)
+[![CI](https://github.com/DritonCa/softcode-magento2-csp-whitelist/actions/workflows/ci.yml/badge.svg)](https://github.com/DritonCa/softcode-magento2-csp-whitelist/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Manage Magento 2's **Content Security Policy (CSP)** whitelist from the admin.
@@ -27,7 +27,7 @@ on a live shop.
 ## Installation
 
 ```bash
-composer config repositories.softcode-csp vcs https://github.com/DritonCa/softcode-magento-csp
+composer config repositories.softcode-magento2-csp-whitelist vcs https://github.com/DritonCa/softcode-magento2-csp-whitelist
 composer require softcode/module-csp-whitelist:^2.0
 bin/magento module:enable Softcode_CspWhitelist
 bin/magento setup:upgrade
